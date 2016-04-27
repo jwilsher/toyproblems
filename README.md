@@ -2,15 +2,15 @@
 solved toy problems
 
 Fibonacci Sequence
-
-function fibo(n) {
-    var start = [0, 1];
-    if(n <= 2) return 1;
-    for (var i = 2; i <= n; i++){
-       start[i] = start[i-1] + start[i-2];
+    
+    function fibo(n) {
+        var start = [0, 1];
+        if(n <= 2) return 1;
+        for (var i = 2; i <= n; i++){
+           start[i] = start[i-1] + start[i-2];
+        }
+        return start;
     }
-    return start;
-}
 
 
 //create a function that gives the fibonacci sequence index value given 'N'

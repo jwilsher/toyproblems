@@ -586,33 +586,33 @@ sumOfTwo
 -----------------------------
 
 //my solution...
-    function switchCase(str) {
-      var myArray = [];
-      myArray = str.split('');
-      myArray.forEach(function(letter, index){
-        if (letter === letter.toUpperCase()) {
-          myArray[index] = letter.toLowerCase();
+        function switchCase(str) {
+          var myArray = [];
+          myArray = str.split('');
+          myArray.forEach(function(letter, index){
+            if (letter === letter.toUpperCase()) {
+              myArray[index] = letter.toLowerCase();
+            }
+            else {
+              myArray[index] = letter.toUpperCase();
+            }
+          });
+          
+          var newArray = myArray.join('');
+          return newArray;
         }
-        else {
-          myArray[index] = letter.toUpperCase();
-        }
-      });
-      
-      var newArray = myArray.join('');
-      return newArray;
-    }
-    
-    switchCase('Hello');
+        
+        switchCase('Hello');
 
 //in class solution....
-    function switchCase(str) {
-        var letters = str.split('');
-        letters.forEach(function(letter, i) {
-            var isUpperCase = letter.toUpperCase() === letter; // if the comparison is true or false, it
-            //will assign either true or false to "isUpperCase"
-            letters[i] = isUpperCase ? letter.toLowerCase() : letter.toUpperCase();
-        });
-        return letters.join('');
-    }
-    
-    switchCase('Hello');
+        function switchCase(str) {
+            var letters = str.split('');
+            letters.forEach(function(letter, i) {
+                var isUpperCase = letter.toUpperCase() === letter; // if the comparison is true or false, it
+                //will assign either true or false to "isUpperCase"
+                letters[i] = isUpperCase ? letter.toLowerCase() : letter.toUpperCase();
+            });
+            return letters.join('');
+        }
+        
+        switchCase('Hello');

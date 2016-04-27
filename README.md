@@ -30,31 +30,31 @@ Merge
 //merge shuld be able to add the tow arrays returning and calling 
 //the result back as a console.log
 
-//ie...merge([1,2,3,4,5], [3,4,5,6,7], function(output) {
-//          console.log('Output:', output);
-//    })
+    //ie...merge([1,2,3,4,5], [3,4,5,6,7], function(output) {
+    //          console.log('Output:', output);
+    //    })
 
-//"Output:" [4, 6, 8, 10, 12]
+    //"Output:" [4, 6, 8, 10, 12]
 
 //in class solution.....
 
-function merge(arr1, arr2, cb) {
-
-    if (arr1.length !== arr2.length) {
-        throw new Error('array]\'s need to be same length'); // stops the execution of the function..throws error to console
+    function merge(arr1, arr2, cb) {
+    
+        if (arr1.length !== arr2.length) {
+            throw new Error('array]\'s need to be same length'); // stops the execution of the function..throws error to console
+        }
+        var results = [];
+        for (var i = 0; i < arr1.length; i++) {
+            results[i] = arr1[i] + arr2[i];
+        }
+    
+        cb(results);
+    
     }
-    var results = [];
-    for (var i = 0; i < arr1.length; i++) {
-        results[i] = arr1[i] + arr2[i];
-    }
-
-    cb(results);
-
-}
-
-var q = merge([1,2,3,4,5], [3,4,5,6,7], function(output) {
-    console.log("Output:", output);
-})
+    
+    var q = merge([1,2,3,4,5], [3,4,5,6,7], function(output) {
+        console.log("Output:", output);
+    })
 
 
 -----------------------------------------------------------
@@ -72,12 +72,12 @@ Once
     
     //the following is to help you test your code
     
-    var f = once(function(x) {
-       return x; 
-    });
-    
-    console.log(f(1));
-    console.log(f(1));
+        var f = once(function(x) {
+           return x; 
+        });
+        
+        console.log(f(1));
+        console.log(f(1));
 
 
 //my solution stuff...
